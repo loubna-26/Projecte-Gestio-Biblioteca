@@ -4,6 +4,81 @@ import java.util.List;
 
 public class Usuari {
 
+<<<<<<< HEAD
+	//Propiedades
+	private int id;
+	private String nom;
+	private List <Llibre> llibresPrestats;
+	private List<Prestec> historial;
+	private static final int MAX_LLIBRES = 3;
+
+	/**
+	 * Constructor de la clase Usuari.
+	 * @param id Identificador del usuario
+	 * @param nom Nombre del usuario
+	 */
+	public Usuari(int id, String nom) {
+		this.id = id;
+		this.nom = nom;
+		this.llibresPrestats = new ArrayList<>();
+		this.historial = new ArrayList<>();
+	}
+
+	//Getters 
+	public String getNom() {
+		return nom;
+	}
+	public int getId() {
+		return id;
+	}
+	public List <Llibre> getLlibresPrestats(){
+		return llibresPrestats;
+	}
+	public List<Prestec> getHistorial() {
+		return historial;
+	}
+
+	/**
+	 * Añade un libro al usuario si no supera el límite.
+	 * 
+	 * @param llibre libro a añadir
+	 * @return true si se añade correctamente, false si no
+	 */
+	public boolean agafarLlibre(Llibre llibre) {
+		if (llibresPrestats.size() < MAX_LLIBRES) {
+			llibresPrestats.add(llibre);
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * Elimina un libro de la lista del usuario.
+	 * 
+	 * @param llibre libro a devolver
+	 */
+	public void retornarLlibre(Llibre llibre) {
+		llibresPrestats.remove(llibre);
+	}
+
+	/**
+	 * Muestra los libros que tiene el usuario.
+	 */
+	public void mostrarLlibres() {
+		for (Llibre l : llibresPrestats) {
+			System.out.println(l);
+		}
+	}
+
+	/**
+	 * Muestra el historial del libro
+	 */
+	public void mostrarHistorial() {
+		for (Prestec p : historial) {
+			System.out.println(p);
+		}
+	}
+=======
     private int id;
     private String nom;
     private List <Llibre> llibresPrestats;
@@ -62,4 +137,5 @@ public class Usuari {
             System.out.println(l);
         }
     }
+>>>>>>> 000f6bc5644411c28dfbfb5b073bcbd57579c972
 }

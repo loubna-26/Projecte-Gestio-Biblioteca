@@ -1,4 +1,6 @@
 # Projecte-Gestio-Biblioteca
+<<<<<<< HEAD
+=======
 
 ##  Descripció
 
@@ -144,3 +146,4 @@ Aquest projecte m'ha ajudat a entendre:
 * Fatima
 * Loubna
 
+>>>>>>> 000f6bc5644411c28dfbfb5b073bcbd57579c972
