@@ -1,6 +1,4 @@
 # Projecte-Gestio-Biblioteca
-<<<<<<< HEAD
-=======
 
 ##  Descripció
 
