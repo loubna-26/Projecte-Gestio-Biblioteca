@@ -1,6 +1,7 @@
 
 public class Llibre {
 
+	//Propiedades
 	private int id;
 	private String titol;
 	private String autor;
@@ -8,6 +9,7 @@ public class Llibre {
 	private int vecesPrestat = 0;
 	private boolean prestat;
 
+	// Constructores
 	/**
 	 * Constructor de la clase Llibre.
 	 * @param id Identificador único del libro
@@ -22,6 +24,7 @@ public class Llibre {
 		this.prestat = false;
 	}
 
+	// Getters de los attributos
 	public int getId() {
 		return id;
 	}

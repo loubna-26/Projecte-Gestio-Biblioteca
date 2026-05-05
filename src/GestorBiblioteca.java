@@ -8,7 +8,6 @@ public class GestorBiblioteca {
 
 	public GestorBiblioteca() {
 		this.prestecs = new ArrayList<>();
-
 	}
 
 	/**
@@ -24,6 +23,7 @@ public class GestorBiblioteca {
 			System.out.println(usuari.getNom() + " ja te el maxim de llibres permesos.");
 			return;
 		}
+		// Es para mostrar cuàl libro, quién lo prestado y qué dia
 		llibre.prestar();
 		Prestec prestec = new Prestec(usuari, llibre, LocalDate.now());
 		prestecs.add(prestec);

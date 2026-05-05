@@ -13,11 +13,13 @@ public class Main {
 		biblioteca.afegirLlibre(new Llibre(3, "Don Quijote", "Cervantes", " Clàssic"));
 		biblioteca.afegirLlibre(new Llibre(4, "AYUSO", "David Fernández", " Historic"));
 
+		// Las informaciones del usuario
 		Usuari usuari = new Usuari(1, "Ainhoa Valles");        
 
+		// El menú o las opciones para sacar la información que el usuario quiere
 		int opcio;
 		do {
-			System.out.println("\n===== GESTIO BIBLIOTECA =====");
+			System.out.println("===== GESTIO BIBLIOTECA =====");
 			System.out.println("1. Llistar llibres");
 			System.out.println("2. Buscar llibre");
 			System.out.println("3. Prestar llibre");

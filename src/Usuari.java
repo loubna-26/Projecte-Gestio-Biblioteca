@@ -4,6 +4,7 @@ import java.util.List;
 
 public class Usuari {
 
+	//Propiedades
 	private int id;
 	private String nom;
 	private List <Llibre> llibresPrestats;
