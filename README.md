@@ -1,4 +1,4 @@
-# Projecte-Gestió-Biblioteca
+# Projecte-Gestio-Biblioteca
 
 ##  Descripció
 
