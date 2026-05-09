@@ -2,14 +2,6 @@
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Classe que representa un usuari de la biblioteca.
- * Cada usuari té un id, un nom, una llista de llibres prestats
- * i un historial de préstecs realitzats.
- * L'usuari només pot tenir un màxim de 3 llibres prestats alhora.
- * @author Loubna
- * @version 1.0
- */
 public class Usuari {
 
     /** Identificador únic de l'usuari */
