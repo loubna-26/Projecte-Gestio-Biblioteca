@@ -1,15 +1,7 @@
+
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Classe que representa una biblioteca.
- * Gestiona una llista de llibres i permet afegir,
- * buscar, eliminar i mostrar llibres.
- * També permet obtenir el llibre més prestat.
- * 
- * @author Fatima
- * @version 1.0
- */
 public class Biblioteca {
 
     /** Llista de llibres que té la biblioteca */
@@ -25,8 +17,7 @@ public class Biblioteca {
 
     /**
      * Afegeix un llibre a la biblioteca.
-     * 
-     * @param llibre Llibre que es vol afegir
+     * @param llibre Llibre que volem afegir
      */
     public void afegirLlibre(Llibre llibre) {
         llibres.add(llibre);
@@ -34,9 +25,8 @@ public class Biblioteca {
 
     /**
      * Busca un llibre pel seu títol.
-     * 
      * @param titol Títol del llibre a buscar
-     * @return El llibre trobat o null si no existeix
+     * @return El llibre si existeix, o null si no es troba
      */
     public Llibre buscarLlibre(String titol) {
         for (Llibre llibre : llibres) {
@@ -48,10 +38,9 @@ public class Biblioteca {
     }
 
     /**
-     * Busca un llibre ignorant accents i majúscules.
-     * 
+     * Busca un llibre pel títol ignorant accents.
      * @param titol Títol del llibre a buscar
-     * @return El llibre trobat o null si no existeix
+     * @return El llibre si coincideix sense accents, o null si no es troba
      */
     public Llibre buscarLlibreSenseAccents(String titol) {
         String titolSimple = normalitzar(titol);
@@ -65,11 +54,9 @@ public class Biblioteca {
     }
 
     /**
-     * Elimina un llibre de la biblioteca.
-     * 
+     * Elimina un llibre pel seu títol.
      * @param titol Títol del llibre a eliminar
-     * @return true si el llibre s'ha eliminat correctament,
-     * false si no existeix
+     * @return true si s'ha eliminat, false si no existeix
      */
     public boolean eliminarLlibre(String titol) {
         Llibre llibre = buscarLlibre(titol);
@@ -82,10 +69,10 @@ public class Biblioteca {
     }
 
     /**
-     * Converteix un text en una versió sense accents.
-     * 
+     * Converteix un text a una versió sense accents.
+     * Serveix per comparar títols de manera més flexible.
      * @param text Text original
-     * @return Text normalitzat sense accents
+     * @return Text sense accents
      */
     private String normalitzar(String text) {
         text = text.toLowerCase();
@@ -100,7 +87,7 @@ public class Biblioteca {
     }
 
     /**
-     * Mostra tots els llibres de la biblioteca.
+     * Mostra tots els llibres de la biblioteca per pantalla.
      */
     public void llistarLlibres() {
         for (Llibre llibre : llibres) {
@@ -109,9 +96,8 @@ public class Biblioteca {
     }
 
     /**
-     * Obté el llibre que ha estat prestat més vegades.
-     * 
-     * @return El llibre més prestat o null si no hi ha llibres
+     * Retorna el llibre que ha estat prestat més vegades.
+     * @return El llibre més prestat, o null si no hi ha llibres
      */
     public Llibre llibreMesPrestat() {
         Llibre max = null;
