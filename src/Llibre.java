@@ -1,151 +1,95 @@
 
 public class Llibre {
 
-<<<<<<< HEAD
-	//Propiedades
-	private int id;
-	private String titol;
-	private String autor;
-	private String categoria;
-	private int vecesPrestat = 0;
-	private boolean prestat;
-
-	// Constructores
-	/**
-	 * Constructor de la clase Llibre.
-	 * @param id Identificador único del libro
-	 * @param titol Título del libro
-	 * @param autor Autor del libro
-	 */
-	public Llibre(int id, String titol, String autor, String categoria) {
-		this.id = id;
-		this.titol = titol;
-		this.autor = autor;
-		this.categoria = categoria;
-		this.prestat = false;
-	}
-
-	// Getters de los attributos
-	public int getId() {
-		return id;
-	}
-
-	public String getTitol() {
-		return titol;
-	}
-
-	public String getAutor() {
-		return autor;
-	}
-
-	public int getVecesPrestat() {
-		return vecesPrestat ;
-	}
-
-	/**
-	 * Indica si el libro está prestado.
-	 * @return true si está prestado, false si está disponible
-	 */
-	public boolean esPrestat() {
-		return prestat;
-	}
-
-	/**
-	 * Comprovar disponibilitat del llibre
-	 */
-	public boolean estaDisponible() {
-		return !prestat;
-	}
-
-	/**
-	 * Marca el libro como prestado.
-	 */
-	public void prestar() {
-		prestat = true;
-		vecesPrestat++;
-	}
-
-	/**
-	 * Marca el libro como devuelto.
-	 */
-	public void retornar() {
-		prestat = false;
-	}
-
-	/**
-	 * Modifica los datos del libro.
-	 * @param nouTitol nuevo título
-	 * @param nouAutor nuevo autor
-	 */
-	public void modificar(String nouTitol, String nouAutor) {
-		this.titol = nouTitol;
-		this.autor = nouAutor;
-	}
-
-	/**
-	 * Devuelve información del libro en formato texto.
-	 */
-	@Override
-	public String toString() {
-		return "[" + id + "] " + titol + " - " + autor + " - " + categoria + (prestat ? " No disponible" : " Disponible");
-	}
-=======
+    /** Identificador únic del llibre */
     private int id;
+
+    /** Títol del llibre */
     private String titol;
+
+    /** Autor del llibre */
     private String autor;
+
+    /** Categoria del llibre (novel·la, fantasia, etc.) */
+    private String categoria;
+
+    /** Nombre de vegades que el llibre ha estat prestat */
+    private int vecesPrestat = 0;
+
+    /** Indica si el llibre està prestat o no */
     private boolean prestat;
 
     /**
-     * Constructor de la clase Llibre.
-     * @param id Identificador único del libro
-     * @param titol Título del libro
-     * @param autor Autor del libro
+     * Constructor del llibre.
+     * Inicialitza totes les dades del llibre i el deixa com a disponible.
+     * @param id Identificador únic del llibre
+     * @param titol Títol del llibre
+     * @param autor Autor del llibre
+     * @param categoria Categoria del llibre
      */
-    public Llibre(int id, String titol, String autor) {
+    public Llibre(int id, String titol, String autor, String categoria) {
         this.id = id;
         this.titol = titol;
         this.autor = autor;
+        this.categoria = categoria;
         this.prestat = false;
     }
 
+    /** @return Identificador del llibre */
     public int getId() {
         return id;
     }
 
+    /** @return Títol del llibre */
     public String getTitol() {
         return titol;
     }
 
+    /** @return Autor del llibre */
     public String getAutor() {
         return autor;
     }
 
+    /** @return Nombre de vegades que ha estat prestat */
+    public int getVecesPrestat() {
+        return vecesPrestat;
+    }
+
     /**
-     * Indica si el libro está prestado.
-     * @return true si está prestado, false si está disponible
+     * Indica si el llibre està prestat.
+     * @return true si està prestat, false si està disponible
      */
     public boolean esPrestat() {
         return prestat;
     }
 
     /**
-     * Marca el libro como prestado.
+     * Indica si el llibre està disponible.
+     * @return true si NO està prestat
      */
-    public void prestar() {
-        prestat = true;
+    public boolean estaDisponible() {
+        return !prestat;
     }
 
     /**
-     * Marca el libro como devuelto.
+     * Marca el llibre com a prestat i incrementa el comptador.
+     */
+    public void prestar() {
+        prestat = true;
+        vecesPrestat++;
+    }
+
+    /**
+     * Marca el llibre com a retornat (disponible).
      */
     public void retornar() {
         prestat = false;
     }
 
     /**
-     * Modifica los datos del libro.
-     * @param nouTitol nuevo título
-     * @param nouAutor nuevo autor
+     * Modifica el títol i l'autor del llibre.
+     * @param nouTitol Nou títol del llibre
+     * @param nouAutor Nou autor del llibre
      */
     public void modificar(String nouTitol, String nouAutor) {
         this.titol = nouTitol;
@@ -153,12 +97,12 @@ public class Llibre {
     }
 
     /**
-     * Devuelve información del libro en formato texto.
+     * Retorna una cadena amb la informació del llibre.
+     * @return Informació del llibre en format text
      */
     @Override
     public String toString() {
-        return "[" + id + "] " + titol + " - " + autor +
-                (prestat ? "  Prestado" : " Disponible");
+        return "[" + id + "] " + titol + " - " + autor + " - " + categoria +
+                (prestat ? " No disponible" : " Disponible");
     }
->>>>>>> 000f6bc5644411c28dfbfb5b073bcbd57579c972
 }
